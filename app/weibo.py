@@ -37,12 +37,12 @@ def parse(content):
     match = re.compile('<td class="td-02">(.*?)</td>', re.DOTALL)
     data = match.findall(content)
     rank = []
-    for item in data:
-        link_data = re.search('<a href="(.*?)" target', item.strip())
-        title_data = re.search('>(.*?)</a>', item.strip())
+    for i in range(10):
+        link_data = re.search('<a href="(.*?)" target', data[i].strip())
+        title_data = re.search('>(.*?)</a>', data[i].strip())
         if not link_data or not title_data:
             continue
-        link = link_data.group(1)
+        link = "https://s.weibo.com/" + link_data.group(1)
         title = title_data.group(1)
         rank.append(f'> - [{title}]({link})\n')
     return rank
