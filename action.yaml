@@ -1,5 +1,5 @@
-name: weibo-bot
-description: 'GitHub Action for weibo bot'
+name: weibo-rank-bot
+description: 'GitHub Action for weibo rank bot'
 author: 'hyh'
 branding:
   icon: 'check-circle'

@@ -1,4 +1,4 @@
-# weibo-bot
+# weibo-rank-bot
 
 企业微信微博热搜信息推送 bot
 
@@ -9,7 +9,7 @@
 在你的任意一个 GitHub 仓库 `.github/workflows/` 文件夹下创建一个 `.yml` 文件，如 `cc.yml`，内容如下：
 
 ```yml
-name: weibo-bot
+name: weibo-rank-bot
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
-      - uses: hongyiheng/weibo-bot@v0.0.3
+      - uses: hongyiheng/weibo-rank-bot@v0.0.1
         with:
           WEBHOOK: ${{ secrets.WEBHOOK }}
 ```
