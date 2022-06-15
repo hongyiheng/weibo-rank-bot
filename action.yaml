@@ -1,0 +1,16 @@
+name: weibo-bot
+description: 'GitHub Action for weibo bot'
+author: 'hyh'
+branding:
+  icon: 'check-circle'
+  color: 'gray-dark'
+inputs:
+  webhook:
+    description: 'work_wx bot hook'
+    required: true
+outputs:
+  result:
+    description: 'The result of api'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
