@@ -20,7 +20,7 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
-      - uses: hongyiheng/weibo-rank-bot@v0.0.3
+      - uses: hongyiheng/weibo-rank-bot@v0.0.4
         with:
           WEBHOOK: ${{ secrets.WEBHOOK }}
 ```
