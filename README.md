@@ -32,3 +32,6 @@ jobs:
 参数获取：
 
 - WEBHOOK： [企业微信群机器人WEBHOOK](https://zhuanlan.zhihu.com/p/370006823)
+
+### 运行结果示例
+![image](https://user-images.githubusercontent.com/48740408/191908521-638c2f58-8c3b-4ebc-96f4-6e068751fe34.png)
