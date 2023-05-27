@@ -2,7 +2,7 @@ name: weibo-rank-bot
 
 on:
   schedule:
-    - cron: '30 1,3,6,9 * * *'
+    - cron: '30 0,6,7,8 * * *'
   workflow_dispatch:
 
 jobs:
@@ -12,3 +12,7 @@ jobs:
       - uses: hongyiheng/weibo-rank-bot@v0.0.5
         with:
           webhook: ${{ secrets.WEBHOOK }}
+      - uses: yanglbme/cordcloud-action@main
+        with:
+          email: ${{ secrets.CC_EMAIL }}
+          passwd: ${{ secrets.CC_PASSWD }}
