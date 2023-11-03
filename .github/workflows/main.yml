@@ -16,3 +16,7 @@ jobs:
         with:
           email: ${{ secrets.CC_EMAIL }}
           passwd: ${{ secrets.CC_PASSWD }}
+      - uses: yanglbme/cordcloud-action@main
+        with:
+          email: ${{ secrets.CC_EMAIL_SECOND }}
+          passwd: ${{ secrets.CC_PASSWD_SECOND }}
