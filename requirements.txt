@@ -1,2 +1,3 @@
 requests
 actions_toolkit
+importlib_metadata
