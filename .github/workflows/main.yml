@@ -15,7 +15,7 @@ jobs:
           python-version: '3.10'
       - name: Install dependencies
         run: |
-          pip install importlib-metadata
+          pip install importlib-metadata==7.1.0
       - name: Check Python version
         run: python --version
       - name: Check installed packages
