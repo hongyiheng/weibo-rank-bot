@@ -9,9 +9,6 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
-      - uses: hongyiheng/weibo-rank-bot@v0.0.5
-        with:
-          webhook: ${{ secrets.WEBHOOK }}
       - uses: yanglbme/cordcloud-action@main
         with:
           email: ${{ secrets.CC_EMAIL }}
@@ -20,3 +17,6 @@ jobs:
         with:
           email: ${{ secrets.CC_EMAIL_SECOND }}
           passwd: ${{ secrets.CC_PASSWD_SECOND }}
+      - uses: hongyiheng/weibo-rank-bot@v0.0.5
+        with:
+          webhook: ${{ secrets.WEBHOOK }}
