@@ -9,6 +9,10 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
       - uses: yanglbme/cordcloud-action@main
         with:
           email: ${{ secrets.CC_EMAIL }}
