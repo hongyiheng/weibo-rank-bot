@@ -15,8 +15,7 @@ jobs:
           python-version: '3.8'
       - name: Install dependencies
         run: |
-          cd ${{ github.workspace }}  # 切换到项目根目录
-          pip install -r requirements.txt
+          pip install importlib-metadata
       - name: Check Python version
         run: python --version
       - name: Check installed packages
