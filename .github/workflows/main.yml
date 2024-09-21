@@ -9,17 +9,12 @@ jobs:
   checkin:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3.10
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install dependencies
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Build and run Docker container
         run: |
-          pip install importlib-metadata==7.1.0
-      - name: Check Python version
-        run: python --version
-      - name: Check installed packages
-        run: pip freeze
+          docker build -t weibo-rank-bot .
+          docker run weibo-rank-bot
       - uses: yanglbme/cordcloud-action@main
         with:
           email: ${{ secrets.CC_EMAIL }}
